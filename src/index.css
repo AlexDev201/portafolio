@@ -1,1 +1,20 @@
-@import 'tailwindcss'
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --color-terminal-bg: #0a0a0a;
+  --color-terminal-text: #e5e5e5;
+}
+
+@layer base {
+  body {
+    @apply bg-terminal-bg text-terminal-text font-sans antialiased selection:bg-gray-800 selection:text-white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
