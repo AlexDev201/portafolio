@@ -14,13 +14,13 @@ export const NavBar = () => {
 
                 <div className="hidden md:flex space-x-8">
                     <a href="#about" className="text-gray-400 hover:text-white transition-colors duration-300">
-                        [Sobre_Mí]
+                        |Sobre_Mí|
                     </a>
                     <a href="#projects" className="text-gray-400 hover:text-white transition-colors duration-300">
-                        [Proyectos]
+                        |Proyectos|
                     </a>
                     <a href="#contact" className="text-gray-400 hover:text-white transition-colors duration-300">
-                        [Contacto]
+                        |Contacto|
                     </a>
                 </div>
             </div>
