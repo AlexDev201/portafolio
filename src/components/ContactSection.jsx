@@ -70,7 +70,7 @@ private ContactService contactService;`}
                         </div>
 
                         <p className="text-gray-400 text-base font-light leading-relaxed">
-                            Si tienes alguna propuesta de proyecto, vacante de desarrollo backend,
+                            Si tienes alguna propuesta de proyecto
                             o simplemente quieres hablar sobre arquitectura de software, bases de datos o APIs,
                             siéntete libre de escribirme o conectar conmigo en mis redes.
                         </p>
