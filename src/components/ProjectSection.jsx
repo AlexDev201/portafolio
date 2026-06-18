@@ -32,7 +32,6 @@ export const ProjectSection = () => {
 
     return (
         <section id="projects" className="relative py-24 md:py-32 overflow-hidden border-t border-white/5">
-            {/* Watermark de código en el fondo */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.02] flex items-center justify-start pl-12">
                 <pre className="font-mono text-[1.5rem] md:text-[2.5rem] text-white select-none leading-tight">
                     {`@RestController
@@ -45,10 +44,9 @@ public class ProjectController {
             </div>
 
             <div className="relative z-10 max-w-6xl mx-auto px-6">
-                {/* Encabezado de la sección */}
                 <div className="mb-16 space-y-3">
                     <p className="font-mono text-gray-600 text-xs tracking-widest uppercase">
-                        {"// Sección 02"}
+
                     </p>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
                         Proyectos
@@ -56,17 +54,14 @@ public class ProjectController {
                     <div className="w-16 h-[2px] bg-gray-600 mt-4"></div>
                 </div>
 
-                {/* Lista de proyectos */}
                 <div className="space-y-12">
                     {projects.map((project, idx) => (
-                        <div 
+                        <div
                             key={idx}
                             className="group relative border border-gray-800 bg-[#0d0d0d] p-6 md:p-8 hover:border-gray-500 transition-all duration-500 rounded-none"
                         >
-                            {/* Decoración lateral en hover */}
                             <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-white scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
 
-                            {/* Fila superior: Endpoint / HTTP Annotation */}
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-6 border-b border-gray-800 pb-4">
                                 <span className="font-mono text-xs md:text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
                                     {project.endpoint}
@@ -76,9 +71,7 @@ public class ProjectController {
                                 </span>
                             </div>
 
-                            {/* Contenido principal */}
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                                {/* Columna izquierda: Información del proyecto */}
                                 <div className="lg:col-span-8 space-y-4">
                                     <div>
                                         <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-gray-200 transition-colors">
@@ -93,7 +86,6 @@ public class ProjectController {
                                         {project.description}
                                     </p>
 
-                                    {/* Viñetas en estilo terminal */}
                                     <ul className="space-y-2.5 pt-2">
                                         {project.bullets.map((bullet, bulletIdx) => (
                                             <li key={bulletIdx} className="flex items-start gap-3 text-xs md:text-sm text-gray-400 font-mono">
@@ -104,12 +96,10 @@ public class ProjectController {
                                     </ul>
                                 </div>
 
-                                {/* Columna derecha: Stack & Acción */}
                                 <div className="lg:col-span-4 flex flex-col justify-between h-full space-y-6 lg:space-y-12 lg:items-end">
-                                    {/* Tags del Stack */}
                                     <div className="flex flex-wrap lg:justify-end gap-2">
                                         {project.technologies.map((tech, techIdx) => (
-                                            <span 
+                                            <span
                                                 key={techIdx}
                                                 className="px-2.5 py-1 font-mono text-[10px] text-gray-400 bg-black border border-gray-800 rounded-none group-hover:border-gray-600 transition-colors duration-300"
                                             >
@@ -118,9 +108,8 @@ public class ProjectController {
                                         ))}
                                     </div>
 
-                                    {/* Enlace al código */}
                                     <div className="pt-4 lg:pt-0">
-                                        <a 
+                                        <a
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"

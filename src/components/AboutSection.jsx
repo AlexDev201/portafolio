@@ -23,7 +23,7 @@ public class AboutMe {
 
                 <div className="mb-16 space-y-3">
                     <p className="font-mono text-gray-600 text-xs tracking-widest uppercase">
-                        {"// About me"}
+
                     </p>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
                         Sobre Mí
@@ -47,7 +47,7 @@ public class AboutMe {
                         <div className="border-l-2 border-gray-700 pl-6">
                             <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
                                 Desarrollador de software enfocado en la creación de soluciones robustas y escalables. Con una base sólida en bases de datos
-                                relacionales y una gran capacidad de adaptación, me apasiona escribir código limpio y mantenible.
+                                relacionales, me apasiona escribir código limpio y mantenible.
                             </p>
                         </div>
 

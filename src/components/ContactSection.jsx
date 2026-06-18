@@ -36,7 +36,7 @@ export const ContactSection = () => {
 
     return (
         <section id="contact" className="relative py-24 md:py-32 overflow-hidden border-t border-white/5">
-            {/* Watermark de código en el fondo */}
+
             <div className="absolute inset-0 pointer-events-none opacity-[0.02] flex items-center justify-end pr-12">
                 <pre className="font-mono text-[1.5rem] md:text-[2.5rem] text-white select-none leading-tight text-right">
                     {`@Autowired
@@ -45,10 +45,10 @@ private ContactService contactService;`}
             </div>
 
             <div className="relative z-10 max-w-6xl mx-auto px-6">
-                {/* Encabezado */}
+
                 <div className="mb-16 space-y-3">
                     <p className="font-mono text-gray-600 text-xs tracking-widest uppercase">
-                        {"// Sección 03"}
+
                     </p>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
                         Contáctame
@@ -56,9 +56,9 @@ private ContactService contactService;`}
                     <div className="w-16 h-[2px] bg-gray-600 mt-4"></div>
                 </div>
 
-                {/* Grid principal */}
+
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                    {/* Columna Izquierda: Información de contacto / Autowired */}
+
                     <div className="lg:col-span-5 space-y-8">
                         <div className="font-mono text-sm text-gray-400 space-y-2">
                             <p className="text-gray-600">{"@Autowired"}</p>
@@ -75,7 +75,7 @@ private ContactService contactService;`}
                             siéntete libre de escribirme o conectar conmigo en mis redes.
                         </p>
 
-                        {/* Enlaces directos */}
+
                         <div className="space-y-4 pt-4">
                             {contactLinks.map((link, idx) => (
                                 <a
@@ -101,7 +101,6 @@ private ContactService contactService;`}
                         </div>
                     </div>
 
-                    {/* Columna Derecha: Formulario */}
                     <div className="lg:col-span-7">
                         <FormularyEmail />
                     </div>
