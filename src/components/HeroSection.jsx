@@ -41,14 +41,12 @@ public class BackendDeveloper {
 
                 <div className="flex-shrink-0 relative mt-8 md:mt-0">
                     <div className="absolute inset-0 border border-gray-600 translate-x-4 translate-y-4"></div>
-                    <div className="relative w-64 h-64 md:w-80 md:h-80 bg-[#111] border border-gray-700 flex flex-col items-center justify-center group overflow-hidden">
-                        <svg className="w-16 h-16 text-gray-600 mb-4 group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        <p className="font-mono text-gray-500 text-xs text-center px-4">
-                            [ FOTO_DE_PERFIL ]<br />
-                            Recomendación: B/N
-                        </p>
+                    <div className="relative w-[260px] h-[260px] md:w-[324px] md:h-[324px] bg-[#111] border border-gray-700 overflow-hidden group">
+                        <img 
+                            src="/foto_portafolio.jpeg" 
+                            alt="Giovanny Molina" 
+                            className="w-full h-full object-cover filter grayscale contrast-110 group-hover:scale-105 transition-transform duration-500"
+                        />
                     </div>
                 </div>
 
