@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/LanguageContext";
+
 export const AboutSection = () => {
+    const { t } = useLanguage();
+
     const valuePillars = [
         {
             icon: (
@@ -6,8 +10,8 @@ export const AboutSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
             ),
-            title: "Adaptabilidad Rápida",
-            desc: "Facilidad para integrarme a nuevos stacks tecnológicos, arquitecturas existentes y dinámicas de trabajo sin perder ritmo de entrega."
+            title: t.about.pillars[0].title,
+            desc: t.about.pillars[0].desc
         },
         {
             icon: (
@@ -15,8 +19,8 @@ export const AboutSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
             ),
-            title: "Inmersión en el Proyecto",
-            desc: "Comprensión profunda del negocio y los requerimientos para proponer soluciones funcionales, eficientes y alineadas con los objetivos de la empresa."
+            title: t.about.pillars[1].title,
+            desc: t.about.pillars[1].desc
         },
         {
             icon: (
@@ -24,8 +28,8 @@ export const AboutSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
             ),
-            title: "Sólidas Habilidades Backend",
-            desc: "Construcción de APIs robustas, seguridad, modelado de bases de datos y aplicación constante de Clean Code, SOLID y buenas prácticas."
+            title: t.about.pillars[2].title,
+            desc: t.about.pillars[2].desc
         },
         {
             icon: (
@@ -33,8 +37,8 @@ export const AboutSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
             ),
-            title: "Trabajo en Equipo & Sinergia",
-            desc: "Comunicación asertiva, colaboración activa en revisiones de código, apoyo mutuo y enfoque constante en los objetivos compartidos."
+            title: t.about.pillars[3].title,
+            desc: t.about.pillars[3].desc
         }
     ];
 
@@ -62,10 +66,10 @@ public class AboutMe implements CompanyValue {
 
                 <div className="mb-16 space-y-3">
                     <p className="font-mono text-gray-500 text-xs tracking-widest uppercase">
-                        {"// VALOR PROPUESTO & PERFIL PROFESIONAL"}
+                        {t.about.sectionTag}
                     </p>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-                        Sobre Mí
+                        {t.about.title}
                     </h2>
                     <div className="w-16 h-[2px] bg-gray-600 mt-4"></div>
                 </div>
@@ -79,17 +83,16 @@ public class AboutMe implements CompanyValue {
 
                         <div className="font-mono text-xs text-gray-600 space-y-1">
                             <p>{"@Repository"}</p>
-                            <p>{"public class DeveloperProfile implements ValueProposition {"}</p>
+                            <p>{t.about.repositoryHeader}</p>
                         </div>
 
 
                         <div className="border-l-2 border-gray-600 pl-6 space-y-3">
                             <p className="text-lg md:text-xl text-gray-200 leading-relaxed font-light">
-                                Desarrollador de Software orientado a aportar soluciones tecnológicas eficientes que impulsan los objetivos de las empresas. 
-                                Me especializo en el ecosistema Java & Spring Boot, creando código limpio, seguro y escalable.
+                                {t.about.bioLine1}
                             </p>
                             <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light">
-                                Mi propuesta de valor se enfoca en entender rápidamente el negocio, adaptarme a las metas del equipo e integrarme activamente para aportar valor real desde el primer día.
+                                {t.about.bioLine2}
                             </p>
                         </div>
 
@@ -104,24 +107,24 @@ public class AboutMe implements CompanyValue {
                                 <span className="text-gray-600 shrink-0">{">"}</span>
                                 <p className="text-gray-400">
                                     <span className="text-gray-500">String</span>{" "}
-                                    <span className="text-white">enfoqueEmpresarial</span>{" = "}
-                                    <span className="text-gray-300">"Soluciones escalables, APIs robustas y valor tangible al negocio"</span>;
+                                    <span className="text-white">{t.about.varEnfoqueEmpresarial}</span>{" = "}
+                                    <span className="text-gray-300">"{t.about.enfoqueEmpresarial}"</span>;
                                 </p>
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-gray-600 shrink-0">{">"}</span>
                                 <p className="text-gray-400">
                                     <span className="text-gray-500">String</span>{" "}
-                                    <span className="text-white">fortalezaClave</span>{" = "}
-                                    <span className="text-gray-300">"Inmersión en el proyecto + rápida adaptabilidad tecnológica"</span>;
+                                    <span className="text-white">{t.about.varFortalezaClave}</span>{" = "}
+                                    <span className="text-gray-300">"{t.about.fortalezaClave}"</span>;
                                 </p>
                             </div>
                             <div className="flex items-start gap-3">
                                 <span className="text-gray-600 shrink-0">{">"}</span>
                                 <p className="text-gray-400">
                                     <span className="text-gray-500">String</span>{" "}
-                                    <span className="text-white">metodología</span>{" = "}
-                                    <span className="text-gray-300">"Trabajo en equipo, Clean Code y resolución proactiva"</span>;
+                                    <span className="text-white">{t.about.varMetodologia}</span>{" = "}
+                                    <span className="text-gray-300">"{t.about.metodología}"</span>;
                                 </p>
                             </div>
                         </div>
@@ -129,7 +132,7 @@ public class AboutMe implements CompanyValue {
 
                         <div className="pt-4 space-y-4">
                             <h3 className="font-mono text-xs uppercase tracking-wider text-gray-500">
-                                {"// LO QUE PUEDO OFRECER A TU EMPRESA"}
+                                {t.about.pillarsTitle}
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {valuePillars.map((pillar, idx) => (
@@ -153,7 +156,7 @@ public class AboutMe implements CompanyValue {
 
 
                         <div className="mt-10 space-y-4">
-                            <p className="font-mono text-xs text-gray-600">{"// Stack & Herramientas"}</p>
+                            <p className="font-mono text-xs text-gray-600">{t.about.stackHeader}</p>
                             <div className="flex flex-wrap gap-4">
                                 <TechIcon name="Java" icon={<JavaIcon />} />
                                 <TechIcon name="Spring" icon={<SpringIcon />} />
@@ -174,7 +177,7 @@ public class AboutMe implements CompanyValue {
                                 className="inline-flex items-center gap-3 border border-gray-600 px-8 py-3 text-sm font-mono text-white hover:bg-white hover:text-black transition-colors duration-300 group"
                             >
                                 <DownloadIcon />
-                                DESCARGAR_CV();
+                                {t.about.downloadCv}
                             </a>
                         </div>
                     </div>
@@ -195,24 +198,21 @@ public class AboutMe implements CompanyValue {
 
 
                             <div className="space-y-4 font-mono text-sm">
-                                <InfoLine label="nombre" value="Giovanny Molina" />
-                                <InfoLine label="rol" value="Backend Developer" />
-                                <InfoLine label="especialización" value="Java & Spring Boot" />
-                                <InfoLine label="ubicación" value="Pereira, Colombia" />
-                                <InfoLine label="disponibilidad" value="Inmediata" />
-                                <InfoLine label="idiomas" value="Español, English" />
+                                <InfoLine label={t.about.info.labelNombre} value={t.about.info.valueNombre} />
+                                <InfoLine label={t.about.info.labelRol} value={t.about.info.valueRol} />
+                                <InfoLine label={t.about.info.labelEspecializacion} value={t.about.info.valueEspecializacion} />
+                                <InfoLine label={t.about.info.labelUbicacion} value={t.about.info.valueUbicacion} />
+                                <InfoLine label={t.about.info.labelDisponibilidad} value={t.about.info.valueDisponibilidad} />
+                                <InfoLine label={t.about.info.labelIdiomas} value={t.about.info.valueIdiomas} />
                             </div>
                         </div>
 
                         <div className="border border-gray-800 bg-[#0d0d0d] p-6 space-y-4">
-                            <p className="font-mono text-xs text-gray-600">{"/* Compromisos con el Equipo */"}</p>
+                            <p className="font-mono text-xs text-gray-600">{t.about.principlesHeader}</p>
                             <ul className="space-y-3">
-                                <PrincipleItem text="Rápida adaptabilidad tecnológica" />
-                                <PrincipleItem text="Inmersión proactiva en el dominio" />
-                                <PrincipleItem text="Trabajo en equipo y comunicación fluida" />
-                                <PrincipleItem text="Clean Code y Principios SOLID" />
-                                <PrincipleItem text="Diseño de REST APIs escalables" />
-                                <PrincipleItem text="Orientación a resultados de negocio" />
+                                {t.about.principles.map((principle, pIdx) => (
+                                    <PrincipleItem key={pIdx} text={principle} />
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -221,6 +221,7 @@ public class AboutMe implements CompanyValue {
         </section>
     );
 };
+
 
 const InfoLine = ({ label, value }) => (
     <div className="flex justify-between items-baseline gap-4">

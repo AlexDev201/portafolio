@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export const FormularyEmail = () => {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -76,13 +78,13 @@ export const FormularyEmail = () => {
 
             {status === "success" ? (
                 <div className="font-mono text-sm py-12 text-center space-y-4">
-                    <p className="text-green-500">{"[INFO] - 200 OK: Mail sent successfully!"}</p>
-                    <p className="text-gray-400">¡Gracias por escribir! Te responderé lo antes posible.</p>
+                    <p className="text-green-500">{t.form.successHeader}</p>
+                    <p className="text-gray-400">{t.form.successMessage}</p>
                     <button
                         onClick={() => setStatus("idle")}
                         className="mt-4 border border-gray-700 px-4 py-2 text-xs text-white hover:bg-white hover:text-black transition-colors"
                     >
-                        ENVIAR_OTRO_MENSAJE();
+                        {t.form.sendAnother}
                     </button>
                 </div>
             ) : (
@@ -96,7 +98,7 @@ export const FormularyEmail = () => {
                     <div className="space-y-4 pl-4 border-l border-gray-800">
                         <div className="space-y-1">
                             <label className="block font-mono text-xs text-gray-500">
-                                {"@RequestParam String name"}
+                                {t.form.nameLabel}
                             </label>
                             <input
                                 type="text"
@@ -104,14 +106,14 @@ export const FormularyEmail = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                placeholder="Tu nombre"
+                                placeholder={t.form.namePlaceholder}
                                 className="w-full bg-[#050505] border border-gray-800 focus:border-gray-500 text-white font-mono text-sm p-3 outline-none transition-colors"
                             />
                         </div>
 
                         <div className="space-y-1">
                             <label className="block font-mono text-xs text-gray-500">
-                                {"@RequestParam String email"}
+                                {t.form.emailLabel}
                             </label>
                             <input
                                 type="email"
@@ -119,14 +121,14 @@ export const FormularyEmail = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                placeholder="tu@email.com"
+                                placeholder={t.form.emailPlaceholder}
                                 className="w-full bg-[#050505] border border-gray-800 focus:border-gray-500 text-white font-mono text-sm p-3 outline-none transition-colors"
                             />
                         </div>
 
                         <div className="space-y-1">
                             <label className="block font-mono text-xs text-gray-500">
-                                {"@RequestBody MessageBody message"}
+                                {t.form.messageLabel}
                             </label>
                             <textarea
                                 name="message"
@@ -134,7 +136,7 @@ export const FormularyEmail = () => {
                                 onChange={handleChange}
                                 required
                                 rows="4"
-                                placeholder="Escribe tu mensaje aquí..."
+                                placeholder={t.form.messagePlaceholder}
                                 className="w-full bg-[#050505] border border-gray-800 focus:border-gray-500 text-white font-mono text-sm p-3 outline-none transition-colors resize-none"
                             />
                         </div>
@@ -150,12 +152,12 @@ export const FormularyEmail = () => {
                             disabled={status === "sending"}
                             className="border border-gray-600 px-6 py-3 font-mono text-sm text-white hover:bg-white hover:text-black transition-colors duration-300 disabled:opacity-50"
                         >
-                            {status === "sending" ? "SENDING..." : "sendMail();"}
+                            {status === "sending" ? t.form.sending : t.form.submitBtn}
                         </button>
 
                         {status === "error" && (
                             <span className="font-mono text-xs text-red-500">
-                                {"[ERROR] - Faltan campos requeridos."}
+                                {t.form.errorRequired}
                             </span>
                         )}
                     </div>
@@ -164,3 +166,4 @@ export const FormularyEmail = () => {
         </div>
     );
 };
+

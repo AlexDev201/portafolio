@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/LanguageContext";
+
 export const HeroSection = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="home" className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 pointer-events-none opacity-[0.03] flex items-center justify-center">
@@ -18,22 +22,22 @@ public class BackendDeveloper {
 
                 <div className="flex-1 space-y-6">
                     <div className="space-y-2">
-                        <h2 className="font-mono text-gray-600 text-sm md:text-base">{"<greeting>"}</h2>
+                        <h2 className="font-mono text-gray-600 text-sm md:text-base">{t.hero.greetingIntro}</h2>
                         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white">
-                            ¡Hola! Soy <br />
+                            {t.hero.hi} <br />
                             <span className="text-gray-300">Giovanny Molina</span>
                         </h1>
-                        <h2 className="font-mono text-gray-600 text-sm md:text-base">{"</greeting>"}</h2>
+                        <h2 className="font-mono text-gray-600 text-sm md:text-base">{t.hero.greetingOutro}</h2>
                     </div>
 
                     <p className="text-xl md:text-2xl text-gray-400 font-light border-l-2 border-gray-700 pl-4">
-                        Desarrollador Backend <br />
-                        <span className="text-white font-medium">Enfocado en Java y Spring Boot</span>
+                        {t.hero.role} <br />
+                        <span className="text-white font-medium">{t.hero.focus}</span>
                     </p>
 
                     <div className="pt-8">
                         <a href="#projects" className="inline-block border border-gray-600 px-8 py-3 text-sm font-mono text-white hover:bg-white hover:text-black transition-colors duration-300">
-                            EXPLORAR_PROYECTOS();
+                            {t.hero.exploreBtn}
                         </a>
                     </div>
                 </div>

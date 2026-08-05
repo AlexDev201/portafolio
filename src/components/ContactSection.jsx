@@ -1,6 +1,9 @@
 import { FormularyEmail } from "./FormularyEmail";
+import { useLanguage } from "../context/LanguageContext";
 
 export const ContactSection = () => {
+    const { t } = useLanguage();
+
     const contactLinks = [
         {
             name: "email",
@@ -47,11 +50,11 @@ private ContactService contactService;`}
             <div className="relative z-10 max-w-6xl mx-auto px-6">
 
                 <div className="mb-16 space-y-3">
-                    <p className="font-mono text-gray-600 text-xs tracking-widest uppercase">
-
+                    <p className="font-mono text-gray-500 text-xs tracking-widest uppercase">
+                        {t.contact.sectionTag}
                     </p>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-                        Contáctame
+                        {t.contact.title}
                     </h2>
                     <div className="w-16 h-[2px] bg-gray-600 mt-4"></div>
                 </div>
@@ -70,9 +73,7 @@ private ContactService contactService;`}
                         </div>
 
                         <p className="text-gray-400 text-base font-light leading-relaxed">
-                            Si tienes alguna propuesta de proyecto
-                            o simplemente quieres hablar sobre arquitectura de software, bases de datos o APIs,
-                            siéntete libre de escribirme o conectar conmigo en mis redes.
+                            {t.contact.intro}
                         </p>
 
 
@@ -109,3 +110,4 @@ private ContactService contactService;`}
         </section>
     );
 };
+
