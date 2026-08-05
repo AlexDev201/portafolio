@@ -1,4 +1,43 @@
 export const AboutSection = () => {
+    const valuePillars = [
+        {
+            icon: (
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            ),
+            title: "Adaptabilidad Rápida",
+            desc: "Facilidad para integrarme a nuevos stacks tecnológicos, arquitecturas existentes y dinámicas de trabajo sin perder ritmo de entrega."
+        },
+        {
+            icon: (
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+            ),
+            title: "Inmersión en el Proyecto",
+            desc: "Comprensión profunda del negocio y los requerimientos para proponer soluciones funcionales, eficientes y alineadas con los objetivos de la empresa."
+        },
+        {
+            icon: (
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+            ),
+            title: "Sólidas Habilidades Backend",
+            desc: "Construcción de APIs robustas, seguridad, modelado de bases de datos y aplicación constante de Clean Code, SOLID y buenas prácticas."
+        },
+        {
+            icon: (
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            ),
+            title: "Trabajo en Equipo & Sinergia",
+            desc: "Comunicación asertiva, colaboración activa en revisiones de código, apoyo mutuo y enfoque constante en los objetivos compartidos."
+        }
+    ];
+
     return (
         <section id="about" className="relative py-24 md:py-32 overflow-hidden">
 
@@ -6,13 +45,13 @@ export const AboutSection = () => {
             <div className="absolute inset-0 pointer-events-none opacity-[0.02] flex items-start justify-end pr-12 pt-24">
                 <pre className="font-mono text-[1.5rem] md:text-[2.5rem] text-white select-none leading-tight text-right">
                     {`@Service
-public class AboutMe {
-    @Value("passion")
-    private String drive;
+public class AboutMe implements CompanyValue {
+    @Value("high-adaptability")
+    private String adaptability;
 
     @Override
-    public String toString() {
-        return "Backend Dev";
+    public ValueOffer deliver() {
+        return new ProductionReadyCode();
     }
 }`}
                 </pre>
@@ -22,8 +61,8 @@ public class AboutMe {
 
 
                 <div className="mb-16 space-y-3">
-                    <p className="font-mono text-gray-600 text-xs tracking-widest uppercase">
-
+                    <p className="font-mono text-gray-500 text-xs tracking-widest uppercase">
+                        {"// VALOR PROPUESTO & PERFIL PROFESIONAL"}
                     </p>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
                         Sobre Mí
@@ -40,14 +79,17 @@ public class AboutMe {
 
                         <div className="font-mono text-xs text-gray-600 space-y-1">
                             <p>{"@Repository"}</p>
-                            <p>{"public class DeveloperProfile {"}</p>
+                            <p>{"public class DeveloperProfile implements ValueProposition {"}</p>
                         </div>
 
 
-                        <div className="border-l-2 border-gray-700 pl-6">
-                            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-                                Desarrollador de software enfocado en la creación de soluciones robustas y escalables. Con una base sólida en bases de datos
-                                relacionales, me apasiona escribir código limpio y mantenible.
+                        <div className="border-l-2 border-gray-600 pl-6 space-y-3">
+                            <p className="text-lg md:text-xl text-gray-200 leading-relaxed font-light">
+                                Desarrollador de Software orientado a aportar soluciones tecnológicas eficientes que impulsan los objetivos de las empresas. 
+                                Me especializo en el ecosistema Java & Spring Boot, creando código limpio, seguro y escalable.
+                            </p>
+                            <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light">
+                                Mi propuesta de valor se enfoca en entender rápidamente el negocio, adaptarme a las metas del equipo e integrarme activamente para aportar valor real desde el primer día.
                             </p>
                         </div>
 
@@ -57,14 +99,21 @@ public class AboutMe {
                         </div>
 
 
-                        <div className="mt-8 space-y-3 font-mono text-sm">
+                        <div className="mt-6 space-y-3 font-mono text-xs md:text-sm bg-[#0d0d0d] border border-gray-800/80 p-5 rounded-sm">
                             <div className="flex items-start gap-3">
                                 <span className="text-gray-600 shrink-0">{">"}</span>
                                 <p className="text-gray-400">
                                     <span className="text-gray-500">String</span>{" "}
-                                    <span className="text-white">enfoque</span>{" = "}
-                                    <span className="text-gray-300">"Código limpio, APIs eficientes, Bases de datos, seguridad y escalabilidad"</span>;
-
+                                    <span className="text-white">enfoqueEmpresarial</span>{" = "}
+                                    <span className="text-gray-300">"Soluciones escalables, APIs robustas y valor tangible al negocio"</span>;
+                                </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <span className="text-gray-600 shrink-0">{">"}</span>
+                                <p className="text-gray-400">
+                                    <span className="text-gray-500">String</span>{" "}
+                                    <span className="text-white">fortalezaClave</span>{" = "}
+                                    <span className="text-gray-300">"Inmersión en el proyecto + rápida adaptabilidad tecnológica"</span>;
                                 </p>
                             </div>
                             <div className="flex items-start gap-3">
@@ -72,14 +121,39 @@ public class AboutMe {
                                 <p className="text-gray-400">
                                     <span className="text-gray-500">String</span>{" "}
                                     <span className="text-white">metodología</span>{" = "}
-                                    <span className="text-gray-300">"Aprendizaje continuo y mejora iterativa"</span>;
+                                    <span className="text-gray-300">"Trabajo en equipo, Clean Code y resolución proactiva"</span>;
                                 </p>
                             </div>
                         </div>
 
 
+                        <div className="pt-4 space-y-4">
+                            <h3 className="font-mono text-xs uppercase tracking-wider text-gray-500">
+                                {"// LO QUE PUEDO OFRECER A TU EMPRESA"}
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {valuePillars.map((pillar, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        className="p-5 border border-gray-800 bg-[#0d0d0d] hover:border-gray-600 transition-all duration-300 group"
+                                    >
+                                        <div className="flex items-center gap-3 mb-2">
+                                            <div className="p-2 border border-gray-800 bg-[#141414] group-hover:border-gray-600 transition-colors">
+                                                {pillar.icon}
+                                            </div>
+                                            <h4 className="text-sm font-semibold text-white font-mono">{pillar.title}</h4>
+                                        </div>
+                                        <p className="text-xs text-gray-400 leading-relaxed font-light">
+                                            {pillar.desc}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+
                         <div className="mt-10 space-y-4">
-                            <p className="font-mono text-xs text-gray-600">{"// Mis herramientas"}</p>
+                            <p className="font-mono text-xs text-gray-600">{"// Stack & Herramientas"}</p>
                             <div className="flex flex-wrap gap-4">
                                 <TechIcon name="Java" icon={<JavaIcon />} />
                                 <TechIcon name="Spring" icon={<SpringIcon />} />
@@ -91,6 +165,7 @@ public class AboutMe {
                                 <TechIcon name="Git" icon={<GitIcon />} />
                             </div>
                         </div>
+
 
                         <div className="mt-10">
                             <a
@@ -124,17 +199,20 @@ public class AboutMe {
                                 <InfoLine label="rol" value="Backend Developer" />
                                 <InfoLine label="especialización" value="Java & Spring Boot" />
                                 <InfoLine label="ubicación" value="Pereira, Colombia" />
+                                <InfoLine label="disponibilidad" value="Inmediata" />
                                 <InfoLine label="idiomas" value="Español, English" />
                             </div>
                         </div>
 
-                        <div className="border border-gray-800 bg-[#0d0d0d] p-6">
-                            <p className="font-mono text-xs text-gray-600 mb-4">{"/* Principios de desarrollo */"}</p>
+                        <div className="border border-gray-800 bg-[#0d0d0d] p-6 space-y-4">
+                            <p className="font-mono text-xs text-gray-600">{"/* Compromisos con el Equipo */"}</p>
                             <ul className="space-y-3">
-                                <PrincipleItem text="Arquitectura Limpia" />
-                                <PrincipleItem text="Principios SOLID" />
-                                <PrincipleItem text="Clean Code" />
-                                <PrincipleItem text="Diseño de RestAPIs" />
+                                <PrincipleItem text="Rápida adaptabilidad tecnológica" />
+                                <PrincipleItem text="Inmersión proactiva en el dominio" />
+                                <PrincipleItem text="Trabajo en equipo y comunicación fluida" />
+                                <PrincipleItem text="Clean Code y Principios SOLID" />
+                                <PrincipleItem text="Diseño de REST APIs escalables" />
+                                <PrincipleItem text="Orientación a resultados de negocio" />
                             </ul>
                         </div>
                     </div>
@@ -206,3 +284,4 @@ const DownloadIcon = () => (
         <line x1="12" y1="15" x2="12" y2="3" />
     </svg>
 );
+
