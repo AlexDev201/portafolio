@@ -17,7 +17,7 @@ export const ContactSection = () => {
         },
         {
             name: "linkedin",
-            label: "linkedin.com/in/giovanny-molina",
+            label: "linkedin.com/in/giovanny-alexander-molina-serna",
             url: "https://www.linkedin.com/in/giovanny-alexander-molina-serna-6a882b290/",
             icon: (
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

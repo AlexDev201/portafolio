@@ -1,6 +1,7 @@
 import { NavBar } from './components/NavBar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
+import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectSection } from './components/ProjectSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -14,6 +15,7 @@ function App() {
         <main className="pt-20 flex-grow">
           <HeroSection />
           <AboutSection />
+          <ExperienceSection />
           <ProjectSection />
           <ContactSection />
         </main>

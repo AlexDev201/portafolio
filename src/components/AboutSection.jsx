@@ -159,20 +159,24 @@ public class AboutMe implements CompanyValue {
                             <p className="font-mono text-xs text-gray-600">{t.about.stackHeader}</p>
                             <div className="flex flex-wrap gap-4">
                                 <TechIcon name="Java" icon={<JavaIcon />} />
+                                <TechIcon name="Go" icon={<GoIcon />} />
+                                <TechIcon name="Python" icon={<PythonIcon />} />
                                 <TechIcon name="Spring" icon={<SpringIcon />} />
                                 <TechIcon name="Spring Boot" icon={<SpringBootIcon />} />
-                                <TechIcon name="Security" icon={<SpringSecurityIcon />} />
-                                <TechIcon name="JPA" icon={<JpaIcon />} />
                                 <TechIcon name="PostgreSQL" icon={<PostgresIcon />} />
+                                <TechIcon name="MySQL" icon={<MySqlIcon />} />
+                                <TechIcon name="JWT" icon={<JwtIcon />} />
+                                <TechIcon name="JUnit" icon={<JunitIcon />} />
                                 <TechIcon name="Docker" icon={<DockerIcon />} />
                                 <TechIcon name="Git" icon={<GitIcon />} />
+                                <TechIcon name="Postman" icon={<PostmanIcon />} />
                             </div>
                         </div>
 
 
                         <div className="mt-10">
                             <a
-                                href="/CV_Giovanny_Molina.pdf"
+                                href="/CV_Giovanny_Molina_Backend.docx"
                                 download
                                 className="inline-flex items-center gap-3 border border-gray-600 px-8 py-3 text-sm font-mono text-white hover:bg-white hover:text-black transition-colors duration-300 group"
                             >
@@ -254,6 +258,30 @@ const SpringIcon = () => (
     <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 2.2c-1.7 2.7-4.2 4.6-7.3 5.6-.5-1-1.2-1.9-2-2.7C15.1 2.6 18.2 1 21.8 2.2zM5.7 3C3.3 5.5 2 8.8 2 12.3c0 5.5 4.5 9.7 9.9 9.7 2.7 0 5.2-1.1 7-3 .4-.4.7-.8 1-1.3-1.4.5-3 .4-4.3-.3-1.1-.6-1.9-1.6-2.3-2.7-.3.1-.7.2-1 .2-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5c.7 0 1.4.2 2 .5.1-1.1.5-2.2 1-3.1C13.5 2.5 11.6 2 9.6 2 8.1 2 6.8 2.4 5.7 3z" /></svg>
 );
 
+const GoIcon = () => (
+    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" textAnchor="middle" fontSize="12" fontFamily="monospace" fontWeight="700">GO</text></svg>
+);
+
+const PythonIcon = () => (
+    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><text x="12" y="17" textAnchor="middle" fontSize="12" fontFamily="monospace" fontWeight="700">PY</text></svg>
+);
+
+const MySqlIcon = () => (
+    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="8" ry="2.5" /><path d="M4 5v7c0 1.38 3.582 2.5 8 2.5s8-1.12 8-2.5V5" /><path d="M4 12v7c0 1.38 3.582 2.5 8 2.5s8-1.12 8-2.5v-7" /></svg>
+);
+
+const JwtIcon = () => (
+    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><text x="12" y="16" textAnchor="middle" fontSize="9" fontFamily="monospace" fontWeight="700">JWT</text></svg>
+);
+
+const JunitIcon = () => (
+    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><text x="12" y="16" textAnchor="middle" fontSize="8" fontFamily="monospace" fontWeight="700">JUnit</text></svg>
+);
+
+const PostmanIcon = () => (
+    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="4.5" fill="currentColor" stroke="none" /><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(-30 12 12)" /></svg>
+);
+
 const PostgresIcon = () => (
     <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M17.128 0a10.134 10.134 0 0 0-2.755.403l-.063.02A10.922 10.922 0 0 0 12.6.258C11.422.238 10.41.524 9.594 1 8.79.721 7.122.24 5.364.336 4.14.403 2.804.775 1.814 1.82.827 2.865.305 4.482.415 6.682c.03.607.203 1.597.49 2.879s.69 2.783 1.193 4.152c.503 1.37 1.054 2.6 1.915 3.436.43.419 1.022.771 1.72.742.49-.02.933-.235 1.315-.552.186.245.385.352.566.451.228.125.45.21.68.266.413.103 1.12.241 1.948.1.282-.047.579-.139.875-.27.011.21.024.463.035.657.014.292.038.618.086.984.048.364.126.778.282 1.166.078.194.179.39.322.56.143.17.357.342.63.378.14.019.283-.003.397-.056a.882.882 0 0 0 .298-.213c.238-.259.39-.6.49-.937.1-.337.16-.658.217-1.014l.063-.394c.07-.44.131-.82.16-1.374l.022-.478c.346.15.696.242 1.025.273.522.048 1.06-.07 1.455-.382.519-.408.835-.606 1.156-.8a3.107 3.107 0 0 0 .694-.57c.262-.288.47-.643.58-1.04.057-.205.08-.37.088-.505.647-.244 1.19-.57 1.612-.975.566-.545.932-1.193 1.065-1.912.133-.718.029-1.503-.244-2.264l.104-.334c.299-1.023.545-2.27.455-3.478-.05-.652-.207-1.323-.572-1.9C20.698.694 19.883.2 18.907.073 18.344-.002 17.728-.025 17.128 0zm.07.888c.552-.022 1.12 0 1.617.065.744.097 1.304.44 1.684.963.38.524.52 1.122.564 1.71.081 1.08-.142 2.253-.438 3.266a3.444 3.444 0 0 0-.076.262c-.65-1.177-1.652-1.952-2.672-2.455-1.103-.544-2.239-.797-3.146-.95a13.366 13.366 0 0 0-2.142-.197c.39-.543.833-.974 1.331-1.27.699-.416 1.527-.562 2.443-.528a5.122 5.122 0 0 1 .835.134c-.032-.067-.026-.148.025-.218.064-.088.178-.14.283-.116a7.778 7.778 0 0 0-.553-.08c-1.044-.117-2.039.002-2.865.497a5.39 5.39 0 0 0-1.426 1.38 13.877 13.877 0 0 0-1.99-.055c-.626.03-1.276.1-1.888.247-.618.15-1.21.378-1.69.723-.226-.06-.478-.104-.783-.12-1.607-.082-3.234.39-3.965.684l-.037.017C3.03 4.1 2.882 3.19 2.86 2.718c-.053-.532-.001-.97.14-1.332.14-.362.362-.664.69-.947.656-.566 1.677-.879 2.708-.924 1.59-.069 3.136.391 3.985.725l.143.052a.166.166 0 0 0 .183-.05c.424-.524 1.31-1.05 2.548-1.168a9.2 9.2 0 0 1 3.94.514.166.166 0 0 0 .142-.014A9.89 9.89 0 0 1 17.197.888z" /></svg>
 );
@@ -268,14 +296,6 @@ const GitIcon = () => (
 
 const SpringBootIcon = () => (
     <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M23.693 10.706l-4.73-8.185c-.31-.536-.9-.865-1.54-.865H6.577c-.64 0-1.23.33-1.54.865l-4.73 8.185c-.31.535-.31 1.196 0 1.731l4.73 8.185c.31.536.9.866 1.54.866h10.846c.64 0 1.23-.33 1.54-.866l4.73-8.185c.31-.535.31-1.196 0-1.731zM12.57 18.14c0 .27-.22.49-.49.49h-.99a.49.49 0 0 1-.49-.49v-.97c0-.27.22-.49.49-.49h.99c.27 0 .49.22.49.49v.97zm0-3.39c0 .27-.22.49-.49.49h-.99a.49.49 0 0 1-.49-.49V7.37c0-.27.22-.49.49-.49h.99c.27 0 .49.22.49.49v7.38z" /></svg>
-);
-
-const SpringSecurityIcon = () => (
-    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.83-3.13 9.37-7 10.5-3.87-1.13-7-5.67-7-10.5V6.3l7-3.12zm-2 5.82v2h4v-2h-4zm0 4v2h4v-2h-4z" /></svg>
-);
-
-const JpaIcon = () => (
-    <svg className="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3" /><path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6" /><path d="M4 12v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6" /></svg>
 );
 
 const DownloadIcon = () => (

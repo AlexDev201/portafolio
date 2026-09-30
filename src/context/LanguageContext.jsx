@@ -4,6 +4,7 @@ export const translations = {
     es: {
         nav: {
             about: "|Sobre_Mí|",
+            experience: "|Experiencia|",
             projects: "|Proyectos|",
             contact: "|Contacto|",
         },
@@ -12,14 +13,15 @@ export const translations = {
             greetingOutro: "</greeting>",
             hi: "¡Hola! Soy",
             role: "Desarrollador Backend",
-            focus: "Enfocado en Java y Spring Boot",
+            focus: "Java · Spring Boot · Go · Microservicios",
+            experience: "+1 año construyendo APIs REST y servicios backend",
             exploreBtn: "EXPLORAR_PROYECTOS();"
         },
         about: {
             sectionTag: "// VALOR PROPUESTO & PERFIL PROFESIONAL",
             title: "Sobre Mí",
             repositoryHeader: "public class DeveloperProfile implements ValueProposition {",
-            bioLine1: "Desarrollador de Software orientado a aportar soluciones tecnológicas eficientes que impulsan los objetivos de las empresas. Me especializo en el ecosistema Java & Spring Boot, creando código limpio, seguro y escalable.",
+            bioLine1: "Desarrollador Backend Junior con más de un año de experiencia construyendo APIs REST y servicios con Java & Spring Boot y, actualmente, microservicios en Go. Arquitectura en capas, modelado de bases de datos relacionales, integración de servicios externos y Clean Code, seguro y escalable.",
             bioLine2: "Mi propuesta de valor se enfoca en entender rápidamente el negocio, adaptarme a las metas del equipo e integrarme activamente para aportar valor real desde el primer día.",
             enfoqueEmpresarial: "Soluciones escalables, APIs robustas y valor tangible al negocio",
             varEnfoqueEmpresarial: "enfoqueEmpresarial",
@@ -57,10 +59,10 @@ export const translations = {
                 labelIdiomas: "idiomas",
                 valueNombre: "Giovanny Molina",
                 valueRol: "Backend Developer",
-                valueEspecializacion: "Java & Spring Boot",
+                valueEspecializacion: "Java · Spring Boot · Go",
                 valueUbicacion: "Pereira, Colombia",
                 valueDisponibilidad: "Inmediata",
-                valueIdiomas: "Español, English"
+                valueIdiomas: "Español (nativo), Inglés (B1)"
             },
             principlesHeader: "/* Compromisos con el Equipo */",
             principles: [
@@ -72,6 +74,48 @@ export const translations = {
                 "Orientación a resultados de negocio"
             ]
         },
+        experience: {
+            sectionTag: "// TRAYECTORIA PROFESIONAL",
+            title: "Experiencia",
+            items: [
+                {
+                    command: "$ cat trayectoria/backend_junior.go",
+                    role: "Desarrollador Backend Junior",
+                    company: "Servicio Nacional de Aprendizaje (SENA)",
+                    date: "Jul 2026 – Actualidad",
+                    code: "package microservicios\n\nimport \"context\"\n\nfunc (s *BackendJunior) Desarrollar(ctx context.Context) error {\n\t// Go · arquitectura en capas · diseño de APIs y BDs\n\treturn s.entregarValor()\n}",
+                    bullets: [
+                        "Desarrollo de servicios backend en Go dentro de una arquitectura de microservicios, adoptando las prácticas y estándares del equipo.",
+                        "Participación en el diseño de APIs y aplicación de arquitectura en capas para mantener servicios modulares y mantenibles.",
+                        "Apoyo en el diseño de bases de datos y en la comprensión de la arquitectura general de la solución."
+                    ]
+                },
+                {
+                    command: "$ cat trayectoria/erp_integrations.py",
+                    role: "Auxiliar de Desarrollo de Software",
+                    company: "ERP Empresarial (proyecto privado, independiente)",
+                    date: "Ene 2026 – Mar 2026",
+                    code: "# erp/integrations.py\n\ndef sincronizar_agendas(request):\n\t\"\"\"Django · Google Calendar API · SOLID\"\"\"\n\treturn HttpResponse(\"agenda sincronizada\")",
+                    bullets: [
+                        "Desarrollo y mantenimiento de funcionalidades backend de un ERP con Python y Django para centralizar la gestión interna.",
+                        "Integración de la API de Google Calendar para sincronizar agendas y automatizar procesos internos.",
+                        "Revisión de código, aplicación de principios SOLID y trabajo con Git y Kanban dentro del equipo."
+                    ]
+                },
+                {
+                    command: "$ cat trayectoria/ReporteController.java",
+                    role: "Desarrollador Backend",
+                    company: "Ingenio Risaralda S.A.",
+                    date: "Feb 2025 – Oct 2025",
+                    code: "@RestController\n@RequestMapping(\"/api/v1/reportes\")\npublic class ReporteController {\n\n\t// Spring Boot · PostgreSQL · Docker\n\t// ~2 horas de reportes manuales → minutos\n}",
+                    bullets: [
+                        "Backend con Java, Spring Boot y PostgreSQL que automatizó la generación de reportes de procesos industriales, reduciendo el tiempo de ~2 horas manuales a minutos.",
+                        "Implementación de la lógica de negocio y APIs REST que alimentan un dashboard de métricas para el equipo técnico; entorno contenerizado con Docker.",
+                        "Análisis de datos de producción con Python (Pandas, Matplotlib) para identificar patrones en variables operacionales."
+                    ]
+                }
+            ]
+        },
         projects: {
             sectionTag: "// PORTAFOLIO DE PROYECTOS",
             title: "Proyectos",
@@ -80,12 +124,12 @@ export const translations = {
                     endpoint: "@GetMapping(\"/api/v1/instrumentation/reports\")",
                     title: "Sistema de Reportes de Instrumentación",
                     subtitle: "Ingenio Risaralda S.A. | Automatización Industrial",
-                    date: "Ago 2025 – Sep 2025",
+                    date: "Feb 2025 – Oct 2025",
                     description: "Aplicación web que automatizó la generación y visualización de reportes de procesos industriales para el equipo de instrumentación, optimizando tiempos operativos significativamente.",
                     bullets: [
-                        "Reducción del tiempo de generación de reportes de 2 horas manuales a solo unos segundos.",
+                        "Reducción del tiempo de generación de reportes de ~2 horas manuales a minutos.",
                         "Arquitectura robusta con Spring Boot para la lógica de instrumentación e integración con PostgreSQL.",
-                        "Dashboard dinámico e interactivo construido en React con visualización de métricas críticas mediante Recharts."
+                        "Análisis de datos de producción con Python (Pandas, Matplotlib) y dashboard dinámico construido en React con Recharts."
                     ]
                 },
                 {
@@ -124,12 +168,13 @@ export const translations = {
         },
         footer: {
             rights: "Todos los derechos reservados.",
-            powered: "// Desarrollado con Spring Boot & React"
+            powered: "// Desarrollado con React & Vite"
         }
     },
     en: {
         nav: {
             about: "|About_Me|",
+            experience: "|Experience|",
             projects: "|Projects|",
             contact: "|Contact|",
         },
@@ -138,14 +183,15 @@ export const translations = {
             greetingOutro: "</greeting>",
             hi: "Hi! I'm",
             role: "Backend Developer",
-            focus: "Focused on Java and Spring Boot",
+            focus: "Java · Spring Boot · Go · Microservices",
+            experience: "1+ year building REST APIs and backend services",
             exploreBtn: "EXPLORE_PROJECTS();"
         },
         about: {
             sectionTag: "// VALUE PROPOSITION & PROFESSIONAL PROFILE",
             title: "About Me",
             repositoryHeader: "public class DeveloperProfile implements ValueProposition {",
-            bioLine1: "Software Developer committed to delivering efficient tech solutions that drive business goals. I specialize in the Java & Spring Boot ecosystem, engineering clean, secure, and scalable code.",
+            bioLine1: "Junior Backend Developer with over a year of experience building REST APIs and services with Java & Spring Boot, and currently, Go microservices. Layered architecture, relational database modeling, external service integrations, and clean, secure, scalable code.",
             bioLine2: "My value proposition focuses on quickly understanding the business domain, seamlessly adapting to team goals, and actively contributing to deliver real value from day one.",
             enfoqueEmpresarial: "Scalable solutions, robust APIs, and tangible business value",
             varEnfoqueEmpresarial: "businessFocus",
@@ -183,10 +229,10 @@ export const translations = {
                 labelIdiomas: "languages",
                 valueNombre: "Giovanny Molina",
                 valueRol: "Backend Developer",
-                valueEspecializacion: "Java & Spring Boot",
+                valueEspecializacion: "Java · Spring Boot · Go",
                 valueUbicacion: "Pereira, Colombia",
                 valueDisponibilidad: "Immediate",
-                valueIdiomas: "Spanish, English"
+                valueIdiomas: "Spanish (native), English (B1)"
             },
             principlesHeader: "/* Team Commitments */",
             principles: [
@@ -198,6 +244,48 @@ export const translations = {
                 "Business results orientation"
             ]
         },
+        experience: {
+            sectionTag: "// PROFESSIONAL TRACK RECORD",
+            title: "Experience",
+            items: [
+                {
+                    command: "$ cat trajectory/backend_junior.go",
+                    role: "Junior Backend Developer",
+                    company: "Servicio Nacional de Aprendizaje (SENA)",
+                    date: "Jul 2026 – Present",
+                    code: "package microservices\n\nimport \"context\"\n\nfunc (s *BackendJunior) Develop(ctx context.Context) error {\n\t// Go · layered architecture · API & DB design\n\treturn s.deliverValue()\n}",
+                    bullets: [
+                        "Developing backend services in Go within a microservices architecture, adopting the team's practices and standards.",
+                        "Participating in API design and applying layered architecture to keep services modular and maintainable.",
+                        "Supporting database design and building an understanding of the overall solution architecture."
+                    ]
+                },
+                {
+                    command: "$ cat trajectory/erp_integrations.py",
+                    role: "Software Development Assistant",
+                    company: "Enterprise ERP (private, independent project)",
+                    date: "Jan 2026 – Mar 2026",
+                    code: "# erp/integrations.py\n\ndef sync_calendars(request):\n\t\"\"\"Django · Google Calendar API · SOLID\"\"\"\n\treturn HttpResponse(\"calendar synced\")",
+                    bullets: [
+                        "Developed and maintained backend features of an enterprise ERP with Python and Django to centralize internal management.",
+                        "Integrated the Google Calendar API to sync agendas and automate internal processes.",
+                        "Code review, application of SOLID principles, and teamwork with Git and Kanban."
+                    ]
+                },
+                {
+                    command: "$ cat trajectory/ReporteController.java",
+                    role: "Backend Developer",
+                    company: "Ingenio Risaralda S.A.",
+                    date: "Feb 2025 – Oct 2025",
+                    code: "@RestController\n@RequestMapping(\"/api/v1/reports\")\npublic class ReporteController {\n\n\t// Spring Boot · PostgreSQL · Docker\n\t// ~2 hours of manual reports → minutes\n}",
+                    bullets: [
+                        "Designed and developed the backend with Java, Spring Boot, and PostgreSQL that automated industrial process report generation, cutting turnaround from ~2 manual hours to minutes.",
+                        "Implemented business logic and REST APIs powering a metrics dashboard for the technical team; containerized environment with Docker.",
+                        "Analyzed production data with Python (Pandas, Matplotlib) to identify patterns in operational variables."
+                    ]
+                }
+            ]
+        },
         projects: {
             sectionTag: "// PROJECT PORTFOLIO",
             title: "Projects",
@@ -206,12 +294,12 @@ export const translations = {
                     endpoint: "@GetMapping(\"/api/v1/instrumentation/reports\")",
                     title: "Instrumentation Reporting System",
                     subtitle: "Ingenio Risaralda S.A. | Industrial Automation",
-                    date: "Aug 2025 – Sep 2025",
+                    date: "Feb 2025 – Oct 2025",
                     description: "Web application that automated the generation and visualization of industrial process reports for the instrumentation team, significantly optimizing operational turnaround times.",
                     bullets: [
-                        "Reduced report generation time from 2 manual hours down to a few seconds.",
+                        "Reduced report generation time from ~2 manual hours down to minutes.",
                         "Robust architecture using Spring Boot for instrumentation business logic and PostgreSQL integration.",
-                        "Dynamic and interactive React dashboard displaying critical metrics using Recharts."
+                        "Production data analysis with Python (Pandas, Matplotlib) and dynamic React dashboard built with Recharts."
                     ]
                 },
                 {
@@ -250,7 +338,7 @@ export const translations = {
         },
         footer: {
             rights: "All rights reserved.",
-            powered: "// Powered by Spring Boot & React"
+            powered: "// Powered by React & Vite"
         }
     }
 };

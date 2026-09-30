@@ -4,7 +4,7 @@ export const ProjectSection = () => {
     const { t } = useLanguage();
 
     const techStacks = [
-        ["Spring Boot", "React", "PostgreSQL", "Recharts", "Docker", "Git"],
+        ["Spring Boot", "React", "PostgreSQL", "Recharts", "Python · Pandas", "Docker", "Git"],
         ["Spring Boot", "React", "PostgreSQL", "WebSockets", "Ubidots API", "Docker"]
     ];
 

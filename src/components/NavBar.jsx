@@ -34,6 +34,9 @@ export const NavBar = () => {
                         <a href="#about" className="text-gray-400 hover:text-white transition-colors duration-300">
                             {t.nav.about}
                         </a>
+                        <a href="#experience" className="text-gray-400 hover:text-white transition-colors duration-300">
+                            {t.nav.experience}
+                        </a>
                         <a href="#projects" className="text-gray-400 hover:text-white transition-colors duration-300">
                             {t.nav.projects}
                         </a>
@@ -103,6 +106,14 @@ export const NavBar = () => {
                         >
                             <span className="text-gray-600 text-xs">{">"}</span>
                             {t.nav.about}
+                        </a>
+                        <a 
+                            href="#experience" 
+                            onClick={closeMobileMenu}
+                            className="flex items-center gap-2 text-gray-300 hover:text-white hover:pl-2 transition-all duration-200 py-1.5 border-b border-gray-800/40"
+                        >
+                            <span className="text-gray-600 text-xs">{">"}</span>
+                            {t.nav.experience}
                         </a>
                         <a 
                             href="#projects" 
